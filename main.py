@@ -67,6 +67,10 @@ def scrapedata():
             whole_box = soup.find(id="photos")
             all_boxes = whole_box.find_all("a")
             print(count)
+            with open(f'C:\\Users\\Lenovo\\Desktop\\Assignment\\PageNo{count}\\CSV Data\\AllData.csv', "a") as s:
+                file=csv.writer(s)
+                file.writerow(("Title", 'Hyperlink'))
+                
             c = 1
             for one_box in all_boxes:
                 # title stuff
